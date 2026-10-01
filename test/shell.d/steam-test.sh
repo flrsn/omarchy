@@ -6,7 +6,7 @@ source "$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)/base-test.sh"
 
 require_command lua
 
-OMARCHY_PATH="$ROOT" lua <<'LUA'
+OMARCHY_PATH="$ROOT" lua - <<'LUA'
 package.path = os.getenv("OMARCHY_PATH") .. "/?.lua;" .. package.path
 
 local rules = {}
